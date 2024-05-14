@@ -1,0 +1,5 @@
+curl -X POST "https://your-deployments-url.vercel.app/api" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "name": "Reader"
+}'
