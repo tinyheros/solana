@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-    const { body } = req;
-    console.log(body)
-    return res.json(body);
+
+    console.log(req.params)
+    return res.json(req);
   }
