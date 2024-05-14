@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
     const { body } = req;
-    console.log(body)
-    return res.json({address: "123zxcvf"});
+    console.log(body.address)
+    return res.json(body.address);
   }
