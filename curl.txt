@@ -8,5 +8,5 @@ curl -X POST "https://solana-theta.vercel.app/api" \
 curl -X POST "https://solana-theta.vercel.app/api/getNFTs" \
   -H "Content-Type: application/json" \
   -d '{
-  "defaultAddress": "123456"
+  "address": "123456"
 }'
