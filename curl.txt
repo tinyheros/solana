@@ -1,5 +1,12 @@
-curl -X POST "https://your-deployments-url.vercel.app/api" \
+curl -X POST "https://solana-theta.vercel.app/api" \
   -H "Content-Type: application/json" \
   -d '{
-  "name": "Reader"
+  "name": "Chris"
+}'
+
+
+curl -X POST "https://solana-theta.vercel.app/api/getNFTs" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "defaultAddress": "123456"
 }'
