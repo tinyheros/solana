@@ -2,7 +2,7 @@ import { Connection, PublicKey } from '@solana/web3.js'
 
 
 export default async function handler(req, res) {
-    console.log("test complete")
+    console.log(req.body)
     res.json({message: "The message"})
 }
 
