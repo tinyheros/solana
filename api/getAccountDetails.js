@@ -1,5 +1,5 @@
 import { Connection, PublicKey } from '@solana/web3.js';
-import { Token } from '@solana/spl-token';
+import { Token, TOKEN_PROGRAM_ID } from '@solana/spl-token';
 import Cors from 'micro-cors';
 
 const cors = Cors();
@@ -25,7 +25,7 @@ export default cors(async function handler(req, res) {
         const solBalance = solLamports / Math.pow(10, 9);
 
         // Get SPL Token balance
-        const token = new Token(connection, new PublicKey(tokenProgramId), null, []);
+        const token = new Token(connection, new PublicKey(tokenProgramId), TOKEN_PROGRAM_ID, null);
         const tokenAccount = await token.getAccountInfo(new PublicKey(address));
         const tokenBalance = tokenAccount ? tokenAccount.amount.toNumber() / Math.pow(10, 6) : 0;
 
