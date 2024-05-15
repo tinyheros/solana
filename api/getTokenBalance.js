@@ -1,4 +1,8 @@
-import { Connection, PublicKey, Token } from '@solana/web3.js';
+import { Connection, PublicKey } from '@solana/web3.js';
+import { Token } from '@solana/spl-token';
+
+// Rest of the code remains the same
+
 
 export default async function handler(req, res) {
     // Get the address parameter from the request body
