@@ -12,13 +12,3 @@ export default cors(async function handler(req, res) {
             solBalance
         })
 })
-
-
-
-
-
-
-
-
-// export default async function handler(req, res) {
-// }
