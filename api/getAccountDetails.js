@@ -1,10 +1,11 @@
 import { Connection, PublicKey } from '@solana/web3.js'
+import Cors from 'micro-cors';
 
+const cors = Cors();
 
-export default async function handler(req, res) {
-    console.log(req.body.address)
-    res.json({address: req.body.address})
-}
+export default cors(async function handler(req, res) {
+    res.json({address: "fdfdfdfdfdfdf"})
+})
 
 
 
