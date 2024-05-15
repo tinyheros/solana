@@ -11,6 +11,6 @@ export default cors(async function handler(req, res) {
         res.status(200).json({
             // address:req.body.address,
             // solBalance
-            address: "111111111111"
+            address: req.body.address
         })
 })
