@@ -5,12 +5,11 @@ const cors = Cors();
 
 export default cors(async function handler(req, res) {
     console.log(req.body.address)
-        // const connection = new Connection('https://api.mainnet-beta.solana.com');
-        // const lamports = await connection.getBalance(new PublicKey(res.body.address));
-        // const solBalance = lamports / Math.pow(10, 9);
+        const connection = new Connection('https://api.mainnet-beta.solana.com');
+        const lamports = await connection.getBalance(new PublicKey(res.body.address));
+        const solBalance = lamports / Math.pow(10, 9);
         res.status(200).json({
-            // address:req.body.address,
-            // solBalance
+            balance: solBalance,
             address: req.body.address
         })
 })
