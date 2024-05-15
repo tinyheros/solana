@@ -1,4 +1,4 @@
-import { Connection, PublicKey } from '@solana/web3.js'
+import { Connection, PublicKey, web3 } from '@solana/web3.js'
 import Cors from 'micro-cors';
 
 const cors = Cors();
