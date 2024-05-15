@@ -1,26 +1,14 @@
 import { Connection, PublicKey } from '@solana/web3.js';
 import { Token } from '@solana/spl-token';
 
-// Rest of the code remains the same
-
-
 export default async function handler(req, res) {
-    // Get the address parameter from the request body
     const address = req.body.address;
-
-    // Initialize Solana connection to the cluster
     const connection = new Connection('https://api.mainnet-beta.solana.com');
-
-    // Define the token mint address
     const tokenMintAddress = new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');
-
     try {
-        // Fetch the token account balance
         const token = new Token(connection, tokenMintAddress);
         const publicKey = new PublicKey(address);
         const accountInfo = await token.getAccountInfo(publicKey);
-
-        // Check if the account info exists and contains a balance property
         if (accountInfo && accountInfo.amount) {
             const balance = accountInfo.amount.toString();
             console.log(balance)
